@@ -1,3 +1,5 @@
+import {AgGridReact, AgGridColumn} from "ag-grid-react";
+
 const App = () => {
     const rowData = [
         {make: "Toyota", model: "Celica", price: 35000},
@@ -7,11 +9,11 @@ const App = () => {
 
     return (
         <div className="ag-theme-alpine" style={{height: 400, width: 600}}>
-            <AgGridReact.AgGridReact rowData={rowData}>
-                <AgGridReact.AgGridColumn field="make"></AgGridReact.AgGridColumn>
-                <AgGridReact.AgGridColumn field="model"></AgGridReact.AgGridColumn>
-                <AgGridReact.AgGridColumn field="price"></AgGridReact.AgGridColumn>
-            </AgGridReact.AgGridReact>
+            <AgGridReact rowData={rowData}>
+                <AgGridColumn field="make"></AgGridColumn>
+                <AgGridColumn field="model"></AgGridColumn>
+                <AgGridColumn field="price"></AgGridColumn>
+            </AgGridReact>
         </div>
     );
 };
